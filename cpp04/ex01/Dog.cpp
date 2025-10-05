@@ -1,0 +1,69 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Dog.cpp                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: juhtoo-h <juhtoo-h@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/19 22:21:10 by cgodecke          #+#    #+#             */
+/*   Updated: 2025/10/04 20:26:59 by juhtoo-h         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "Dog.hpp"
+
+Dog::Dog() : Animal()
+{
+	std::cout << "Dog default constructor called\n";
+	_type = "Dog";
+	_own_brain = new Brain();
+}
+
+Dog::Dog (std::string type) : Animal(type)
+{
+	std::cout << "Dog constructor called\n";
+	_type = type;
+	_own_brain = new Brain();
+}
+
+Dog::Dog(const Dog &other) : Animal(other)
+{
+	std::cout << "Dog copy constructor called\n";
+	_own_brain = new Brain(*(other._own_brain));
+}
+
+Dog &Dog::operator=(const Dog &other)
+{
+	std::cout << "Dog copy assignment constructor called\n";
+	_type = other._type;
+	delete _own_brain;
+	_own_brain = new Brain(*(other._own_brain));
+	return (*this);
+}
+
+Dog::~Dog()
+{
+	delete _own_brain;
+	std::cout << "Dog deconstructor called\n";
+}
+
+void Dog::makeSound() const
+{
+	std::cout << "Woof Woof Woof\n";
+}
+
+std::string Dog::getIdea(int idea_nr) const
+{
+	if (idea_nr >= 0 && idea_nr < 100)
+		return (_own_brain->ideas[idea_nr]);
+	else
+		return ("Dog brain just have 100 ideas");
+}
+
+void Dog::setIdea(int idea_nr, std::string new_idea)
+{
+	if (idea_nr >= 0 && idea_nr < 100)
+		_own_brain->ideas[idea_nr] = new_idea;
+	else
+		std::cout << "Dog brain can just save 100 ideas";
+}
