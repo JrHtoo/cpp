@@ -6,12 +6,12 @@
 #    By: juhtoo-h <juhtoo-h@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/09/03 11:18:30 by juhtoo-h          #+#    #+#              #
-#    Updated: 2025/10/04 13:44:52 by juhtoo-h         ###   ########.fr        #
+#    Updated: 2025/10/05 13:32:35 by juhtoo-h         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 C++ = c++
-C++_FLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
+C++_FLAGS = -Wall -Wextra -Werror -std=c++98
 FILES = ClapTrap.cpp main.cpp
 
 OBJFILES = $(FILES:.cpp=.o)

@@ -6,13 +6,11 @@
 /*   By: juhtoo-h <juhtoo-h@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/02 17:00:16 by juhtoo-h          #+#    #+#             */
-/*   Updated: 2025/10/04 11:21:36 by juhtoo-h         ###   ########.fr       */
+/*   Updated: 2025/10/06 09:35:25 by juhtoo-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "main.hpp"
-#include "PhoneBook.hpp"
-#include "Contact.hpp"
 
 std::string getUserInput(std::string message)
 {
@@ -22,6 +20,8 @@ std::string getUserInput(std::string message)
 	{
 		std::cout << message;
 		std::getline(std::cin, user_input);
+		if (user_input.empty())
+			std::cout << "Input cannot be empty. Try Again!!!" << std::endl;
 	}
 	return (user_input);
 }

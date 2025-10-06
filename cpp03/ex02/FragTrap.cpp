@@ -6,7 +6,7 @@
 /*   By: juhtoo-h <juhtoo-h@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/08 18:22:54 by juhtoo-h          #+#    #+#             */
-/*   Updated: 2025/10/04 18:24:01 by juhtoo-h         ###   ########.fr       */
+/*   Updated: 2025/10/05 13:17:20 by juhtoo-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 FragTrap::FragTrap() : ClapTrap()
 {
-	std::cout << "FragTrap: Default constructor called\n";
+	std::cout << "FragTrap Default constructor called\n";
 	this->_hit_points = 100;
 	this->_energy_points = 100;
 	this->_attack_damage = 30;
@@ -22,7 +22,7 @@ FragTrap::FragTrap() : ClapTrap()
 
 FragTrap::FragTrap(const std::string name) : ClapTrap(name)
 {
-	std::cout << "FragTrap: Name constructor called\n";
+	std::cout << "FragTrap Name constructor called\n";
 	this->_hit_points = 100;
 	this->_energy_points = 100;
 	this->_attack_damage = 30;
@@ -30,13 +30,13 @@ FragTrap::FragTrap(const std::string name) : ClapTrap(name)
 
 FragTrap::FragTrap(const FragTrap &other) : ClapTrap(other)
 {
-	std::cout << "FragTrap: Copy constructor called\n";
+	std::cout << "FragTrap Copy constructor called\n";
 }
 
 FragTrap &FragTrap::operator = (const FragTrap &other)
 {
 	
-	std::cout << "FragTrap: Copy assignment constructor called\n";
+	std::cout << "FragTrap Copy assignment constructor called\n";
 	this->_name = other._name;
 	this->_hit_points = other._hit_points;
 	this->_energy_points = other._energy_points;
@@ -46,7 +46,7 @@ FragTrap &FragTrap::operator = (const FragTrap &other)
 
 FragTrap::~FragTrap()
 {
-	std::cout << "FragTrap: Deconstructor called\n";
+	std::cout << "FragTrap Deconstructor called\n";
 }
 
 void FragTrap::attack(const std::string &target)

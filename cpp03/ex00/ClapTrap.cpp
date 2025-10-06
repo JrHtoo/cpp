@@ -6,7 +6,7 @@
 /*   By: juhtoo-h <juhtoo-h@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/03 13:07:10 by juhtoo-h          #+#    #+#             */
-/*   Updated: 2025/10/04 13:41:39 by juhtoo-h         ###   ########.fr       */
+/*   Updated: 2025/10/06 10:52:08 by juhtoo-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,12 +86,42 @@ void ClapTrap::beRepaired(unsigned int amount)
 		std::cout << "Not enough energy points for being repaired" << std::endl;
 }
 
-int ClapTrap::get_hit_points()
+unsigned int ClapTrap::get_hit_points() const
 {
 	return (this->_hit_points);
 }
 
-int	ClapTrap::get_energy_points()
+void ClapTrap::set_hit_points(unsigned int number)
+{
+	this->_hit_points = number;
+}
+
+unsigned int ClapTrap::get_energy_points() const
 {
 	return (this->_energy_points);
+}
+
+void ClapTrap::set_energy_points(unsigned int number)
+{
+	this->_energy_points = number;
+}
+
+std::string ClapTrap::get_name() const
+{
+	return (this->_name);
+}
+
+void ClapTrap::set_name(std::string name)
+{
+	this->_name = name;
+}
+
+unsigned int ClapTrap::get_attack_damage() const
+{
+	return (this->_attack_damage);
+}
+
+void ClapTrap::set_attack_damage(unsigned int number)
+{
+	this->_attack_damage = number;
 }

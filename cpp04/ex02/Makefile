@@ -6,13 +6,13 @@
 #    By: juhtoo-h <juhtoo-h@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/09/19 19:21:21 by juhtoo-h          #+#    #+#              #
-#    Updated: 2025/10/04 19:41:26 by juhtoo-h         ###   ########.fr        #
+#    Updated: 2025/10/06 11:54:48 by juhtoo-h         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 C++ = c++
 C++_FLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic
-FILES = main.cpp Animal.cpp Cat.cpp Dog.cpp Brain.cpp
+FILES = main.cpp AAnimal.cpp Cat.cpp Dog.cpp Brain.cpp
 
 OBJFILES = $(FILES:.cpp=.o)
 

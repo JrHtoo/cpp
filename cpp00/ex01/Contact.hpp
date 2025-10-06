@@ -6,7 +6,7 @@
 /*   By: juhtoo-h <juhtoo-h@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/02 17:05:46 by juhtoo-h          #+#    #+#             */
-/*   Updated: 2025/10/04 11:21:18 by juhtoo-h         ###   ########.fr       */
+/*   Updated: 2025/10/06 09:36:57 by juhtoo-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ class Contact
 		time_t		_created;
 
 		public:
-			// Constructors
 			Contact();
 			~Contact();
 			Contact(std::string first_name, std::string last_name, std::string nick_name,

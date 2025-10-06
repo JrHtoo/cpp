@@ -6,7 +6,7 @@
 /*   By: juhtoo-h <juhtoo-h@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/02 17:12:01 by juhtoo-h          #+#    #+#             */
-/*   Updated: 2025/10/04 11:21:11 by juhtoo-h         ###   ########.fr       */
+/*   Updated: 2025/10/06 09:01:32 by juhtoo-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ Contact::Contact()
 
 Contact::~Contact()
 {
-	
 }
 
 Contact::Contact(std::string first_name, std::string last_name, std::string nick_name,

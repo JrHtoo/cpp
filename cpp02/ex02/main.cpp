@@ -6,7 +6,7 @@
 /*   By: juhtoo-h <juhtoo-h@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/30 11:58:55 by juhtoo-h          #+#    #+#             */
-/*   Updated: 2025/10/05 12:32:44 by juhtoo-h         ###   ########.fr       */
+/*   Updated: 2025/10/06 10:28:09 by juhtoo-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,26 @@ int main( void )
 	std::cout << a++ << std::endl;
 	std::cout << a << std::endl;
 	std::cout << b << std::endl;
+	std::cout << a+b << std::endl;
+	std::cout << a-b << std::endl;
+	std::cout << a*b << std::endl;
+	std::cout << b/a << std::endl;
 	std::cout << Fixed::max( a, b ) << std::endl;
 	std::cout << Fixed::min( a, b ) << std::endl;
+	
+	bool output;
+	output = a < b;
+	std::cout << "a < b : " << output << std::endl;
+	output = a <= b;
+	std::cout << "a <= b : " << output << std::endl;
+	output = a > b;
+	std::cout << "a > b : " << output << std::endl;
+	output = a >= b;
+	std::cout << "a >= b : " << output << std::endl;
+	output = a == b;
+	std::cout << "a == b : " << output << std::endl;
+	output = a != b;
+	std::cout << "a != b : " << output << std::endl;
 	
 	return 0;
 }

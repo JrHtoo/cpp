@@ -6,11 +6,13 @@
 /*   By: juhtoo-h <juhtoo-h@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/04 21:30:25 by juhtoo-h          #+#    #+#             */
-/*   Updated: 2025/10/04 21:54:18 by juhtoo-h         ###   ########.fr       */
+/*   Updated: 2025/10/06 10:34:33 by juhtoo-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Point.hpp"
+
+// triangle's area formula - (1/2) * (x1(y2 − y3) + x2(y3 − y1) + x3(y1 − y2))
 
 static Fixed area(const Point &a, const Point &b, const Point &c)
 {

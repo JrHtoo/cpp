@@ -6,7 +6,7 @@
 /*   By: juhtoo-h <juhtoo-h@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/02 18:42:51 by juhtoo-h          #+#    #+#             */
-/*   Updated: 2025/10/04 11:22:07 by juhtoo-h         ###   ########.fr       */
+/*   Updated: 2025/10/06 09:24:32 by juhtoo-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,26 +51,18 @@ static void	print_contact(Contact contact)
 
 void	search_contact(PhoneBook *phoneBook)
 {
-	int	index;
+	int			index;
+	std::string	input;
 
 	print_layout(phoneBook);
 	std::cout << "Enter index: ";
-	if(!(std::cin >> index))
-	{
-		std::cout << "Invalid index" << std::endl;
-		std::cin.clear();
-		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-	}
-	else if (index > 0 && index <= phoneBook->getNumEntries())
-	{
-		print_contact(phoneBook->contacts[index - 1]);
-		std::cin.clear();
-		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-	}
+	std::getline(std::cin, input);
+	if (input.length() == 1 && isdigit(input[0]))
+		index = input[0] - '0';
 	else
-	{
+		index = -1;
+	if (index > 0 && index <= phoneBook->getNumEntries())
+		print_contact(phoneBook->contacts[index - 1]);
+	else
 		std::cout << "Invalid index" << std::endl;
-		std::cin.clear();
-		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-	}
 }

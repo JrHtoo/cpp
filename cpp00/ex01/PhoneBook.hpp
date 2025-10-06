@@ -6,7 +6,7 @@
 /*   By: juhtoo-h <juhtoo-h@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/02 17:02:21 by juhtoo-h          #+#    #+#             */
-/*   Updated: 2025/10/04 11:22:02 by juhtoo-h         ###   ########.fr       */
+/*   Updated: 2025/10/06 09:26:44 by juhtoo-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ class PhoneBook
 	
 	public:
 		Contact contacts[MAX_CONTACT];
-		// Constructors
 		PhoneBook();
 		~PhoneBook();
 

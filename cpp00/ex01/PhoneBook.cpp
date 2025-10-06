@@ -6,7 +6,7 @@
 /*   By: juhtoo-h <juhtoo-h@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/02 18:14:10 by juhtoo-h          #+#    #+#             */
-/*   Updated: 2025/10/04 11:21:56 by juhtoo-h         ###   ########.fr       */
+/*   Updated: 2025/10/06 09:26:52 by juhtoo-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,7 @@ PhoneBook::PhoneBook()
 }
 
 PhoneBook::~PhoneBook()
-{
-	
+{	
 }
 
 void	PhoneBook::addContact(std::string first_name, std::string last_name, std::string nick_name,
